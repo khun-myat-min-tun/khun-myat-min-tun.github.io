@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-primary: 'Red Hat Display', sans-serif;
+    
+    --fw-med: 500;
+    --fw-bold: 700;
+    --fw-xbold: 900;
+
+    --clr-pale: hsl(225, 100%, 94%);
+    --clr-bright: hsl(245, 75%, 52%);
+    --clr-vpale: hsl(225, 100%, 98%);
+    --clr-desaturated: hsl(224, 23%, 55%);
+    --clr-dark: hsl(223, 47%, 23%);
+
+    --fs-h1: 1.5rem;
+    --fs-h2: 1rem;
+    --fs-body: 1rem;
+    --fs-small: .9rem;
+}
+
+@media (min-width: 800px) {
+    /*
+    :root {
+        --fs-h1: 1.625rem;
+        --fs-h2: 1.125rem;
+        --fs-body: 1.125rem;
+        --fs-small: 1rem;
+    }
+    */
+}
+
+body {
+    background-color: var(--clr-pale);
+    background-image: url(/images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: var(--clr-desaturated);
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 800px) {
+    body {
+        background-image: url("/images/pattern-background-desktop.svg");
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background: none;
+    margin: .5em 0;
+    border: none;
+    border-radius: .625em;
+    cursor: pointer;
+    padding: 1em 0;
+}
+
+h1,
+h2 {
+    margin: 0;
+    line-height: 1;
+    color: var(--clr-dark);
+    font-weight: var(--fw-xbold);
+}
+
+h1 { font-size: var(--fs-h1); }
+
+h2 { font-size: var(--fs-h2); }
+
+.card {
+    background: white;
+    width: 70%;
+    max-width: 400px;
+    border-radius: 1.5em;
+}
+
+.hero-img {
+    border-radius: 1.5em 1.5em 0 0;
+}
+
+.content {
+    text-align: center;
+    margin: 2.5em auto;
+    width: 85%;
+}
+
+.content > p {
+    margin: 1.5em auto;
+    width: 90%;
+}
+
+.plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--clr-vpale);
+    margin: 1.5rem 0;
+    padding: 1em;
+    border-radius: .825em;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.price p {
+    margin: 0;
+}
+
+.change {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-small);
+}
+
+.submit {
+    background: var(--clr-bright);
+    color: var(--clr-vpale);
+    font-weight: var(--fw-bold);
+    box-shadow: .125rem 1rem 3rem -1rem var(--clr-bright);
+}
+
+.cancel {
+    color: var(--clr-desaturated);
+    font-weight: var(--fw-xbold);
+}
+
